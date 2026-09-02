@@ -1,4 +1,4 @@
-var secret = "TGF4bWlARGV2";
+var secret = "TGF4bWlARGV2QDEy";
 var user_pass = prompt("આ વેબસાઈટ જોવા માટે પાસવર્ડ નાખો:");
 
 if (user_pass === null || btoa(user_pass) !== secret) {
