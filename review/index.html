@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Reviews | Laxminarayan Developers</title>
+    <link rel="icon" type="image/png" href="/properties/laxminarayandevelopers-icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.min.js"></script>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* પૂરી સ્ક્રીન */
+            overflow: hidden;
+            /* સ્ક્રોલ બિલકુલ બંધ */
+            background-color: #f0f2f5;
+            font-family: Poppins, sans-serif;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .review-page-bg {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* આ બે લાઈન ઉપર-નીચે ગેપ રાખવા માટે ખાસ છે */
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        @media (max-width:768px) {
+
+            body,
+            html {
+                overflow: auto !important;
+                height: auto !important
+            }
+
+            .review-page-bg {
+                height: auto !important;
+                padding: 40px 0 !important;
+                display: block !important
+            }
+
+            .review-card-container {
+                margin: 0 auto !important;
+                width: 95% !important;
+                padding: 30px 20px !important
+            }
+        }
+
+        .review-card-container {
+            background: #fff;
+            max-width: 480px;
+            /* થોડું નાનું કર્યું જેથી ગેપ સારો દેખાય */
+            width: 90%;
+            padding: 25px 40px;
+            /* ઉપર-નીચે 25px કર્યું */
+            border-radius: 25px;
+            box-shadow: 0 8px 60px rgba(255, 179, 71, .5);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .review-logo img {
+            height: 75px;
+            margin-bottom: 15px
+        }
+
+        .review-heading {
+            color: #333;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 8px 0
+        }
+
+        .review-subtext {
+            color: #77838f;
+            font-size: 14px;
+            margin-bottom: 25px
+        }
+
+        .modern-form input,
+        .modern-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 12px;
+            border: 1px solid #e7eaf3;
+            border-radius: 12px;
+            background: #fcfcfd;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: .3s
+        }
+
+        .modern-form input:focus,
+        .modern-form textarea:focus {
+            border-color: #ffb347;
+            outline: 0;
+            resize: vertical;
+            box-shadow: 0 0 8px rgba(255, 179, 71, .1)
+        }
+
+        .modern-form textarea {
+            height: 90px;
+            resize: none
+        }
+
+        .file-upload-wrapper {
+            background: #f8fafd;
+            border: 1px solid #e7eaf3;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 20px;
+            text-align: left
+        }
+
+        #submitBtn {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffb347;
+            color: #000;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s
+        }
+
+        #submitBtn:hover {
+            background-color: #e6a13e;
+            transform: translateY(-2px)
+        }
+
+        .privacy-note {
+            font-size: 11px;
+            color: #aeb4be;
+            margin-top: 15px
+        }
+
+        .modern-form .file-upload-wrapper {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            box-sizing: border-box;
+            width: 100%
+        }
+
+        .modern-form .file-label {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 8px
+        }
+
+        .modern-form .file-input {
+            font-size: 14px;
+            color: #333;
+            outline: 0
+        }
+
+        .modern-form .file-input::file-selector-button {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 6px 12px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 13px;
+            transition: background-color .3s
+        }
+
+        .modern-form .file-input::file-selector-button:hover {
+            background-color: #e4e4e4
+        }
+    </style>
+</head>
+
+<body>
+    <div class="review-page-bg">
+        <div class="review-card-container">
+            <div class="review-logo"><img src="/properties/laxminarayandevelopers.png" alt="Laxminarayan Developer">
+            </div>
+            <h2 class="review-heading">Give Us Your Feedback</h2>
+            <p class="review-subtext">Your review helps us improve our projects and customer service.</p>
+            <form id="reviewForm" class="modern-form"><input type="text" id="reviewerName" placeholder="Your Full Name"
+                    required> <input type="text" id="reviewerPhone" placeholder="Mobile Number" required> <textarea
+                    id="reviewerMessage" placeholder="Write your experience with Laxminarayan Developer..."
+                    required></textarea>
+                <div class="file-upload-wrapper"><label for="reviewerImage" class="file-label">Upload Profile
+                        Picture</label> <input type="file" id="reviewerImage" accept="image/png, image/jpeg, image/jpg"
+                        class="file-input"></div><button type="submit" id="submitBtn">Submit</button>
+            </form>
+            <p class="privacy-note">Your privacy is important to us. Your information is safe and secure.</p>
+        </div>
+    </div>
+    <script>document.getElementById("reviewForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var fileInput = document.getElementById("reviewerImage");
+            var file = fileInput.files[0];
+            if (!file) {
+                alert("Please choose a profile photo to upload.");
+                return;
+            }
+            var btn = document.getElementById("submitBtn");
+            btn.innerText = "Submitting... Please wait";
+            btn.disabled = true;
+            var reader = new FileReader();
+            reader.onload = function (event) {
+                var base64String = event.target.result.split(',')[1];
+                var formData = new URLSearchParams();
+                var rawPhone = document.getElementById("reviewerPhone").value;
+                var cleanPhone = "'" + rawPhone.replace(/[^0-9+]/g, '');
+                formData.append("name", document.getElementById("reviewerName").value);
+                formData.append("number", cleanPhone);
+                formData.append("review", document.getElementById("reviewerMessage").value);
+                formData.append("fileData", base64String);
+                formData.append("fileName", file.name);
+                formData.append("mimeType", file.type);
+                fetch("https://script.google.com/macros/s/AKfycbwlMixT1xdoWzBIIuXNscth8doV3Ak6hO4NCe7pKzWQGbBoe5hBfJ-78vWN5fzo_qkg/exec", {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: formData
+                })
+                    .then(response => {
+                        alert("Thank You! Your review has been submitted successfully.");
+                        document.getElementById("reviewForm").reset();
+                        btn.innerText = "Submit Review";
+                        btn.disabled = false;
+                    })
+                    .catch(error => {
+                        alert("Oops! Something went wrong. Check your internet connection.");
+                        console.error(error);
+                        btn.innerText = "Submit Review";
+                        btn.disabled = false;
+                    });
+            };
+            reader.readAsDataURL(file);
+        });</script>
+</body>
+
+</html>

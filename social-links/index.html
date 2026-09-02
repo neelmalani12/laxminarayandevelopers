@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Social Media Page | Laxminarayan Developers</title>
+    <link rel="icon" type="image/png" href="/properties/laxminarayandevelopers-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --amber: #FFB347;
+            --bg-light: #f9fafb;
+            --text-dark: #1f2937;
+            --text-muted: #6b7280
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px
+        }
+
+        .link-container {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            padding: 45px 25px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+            text-align: center;
+            border-top: 6px solid var(--amber)
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border: 3px solid var(--amber);
+            padding: 4px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(255, 179, 71, .2)
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: #111827
+        }
+
+        p.bio {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            line-height: 1.5
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 20px;
+            background-color: #fff;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+            border: 2px solid #f3f4f6;
+            transition: all .3s ease;
+            position: relative
+        }
+
+        .social-btn i {
+            font-size: 22px;
+            position: absolute;
+            left: 25px;
+            color: var(--amber);
+            transition: all .3s ease
+        }
+
+        .social-btn:hover {
+            border-color: var(--amber);
+            background-color: #fff9f0;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 179, 71, .2);
+            color: var(--amber)
+        }
+
+        .social-btn:hover i {
+            transform: scale(1.15)
+        }
+
+        .footer-text {
+            margin-top: 35px;
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500
+        }
+    </style>
+</head>
+
+<body>
+    <div class="link-container"><img src="/properties/laxminarayandevelopers.png" alt="Laxminarayan Developers"
+            class="profile-img">
+        <h1>Laxminarayan Developers</h1>
+        <p class="bio">Your trusted partner for luxury properties and investment-ready developments in Surat.</p>
+        <div class="links-wrapper"><a href="https://laxminarayan-developers.onrender.com" class="social-btn"
+                target="_blank"><i class="fas fa-globe"></i> Official Website </a><a
+                href="https://www.instagram.com/laxminarayandeveloper" class="social-btn" target="_blank"><i
+                    class="fab fa-instagram"></i> Instagram </a><a href="https://www.facebook.com/laxminarayandeveloper"
+                class="social-btn" target="_blank"><i class="fab fa-facebook-f"></i> Facebook </a><a
+                href="https://www.linkedin.com/company/laxminarayandevelopers" class="social-btn" target="_blank"><i
+                    class="fab fa-linkedin-in"></i> LinkedIn </a><a
+                href="https://www.pinterest.com/laxminarayandevelopers" class="social-btn" target="_blank"><i
+                    class="fab fa-pinterest"></i> Pinterest </a><a
+                href="https://www.youtube.com/@laxminarayan_developers" class="social-btn" target="_blank"><i
+                    class="fab fa-youtube"></i> YouTube</a></div>
+        <div class="footer-text">© 2026 Laxminarayan Developers. All rights reserved.</div>
+    </div>
+</body>
+
+</html>
