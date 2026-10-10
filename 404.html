@@ -8,10 +8,10 @@
 
     <!-- Tamari Theme na Icons ane CSS -->
     <link rel="icon" type="image/png" href="/properties/laxminarayandevelopers-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
-        /* Global Reset - બધી સ્ક્રીન પર પરફેક્ટ સ્પેસિંગ માટે */
         * {
             margin: 0;
             padding: 0;
@@ -23,13 +23,12 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        /* 404 Section Custom Styling */
         .error-page-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh; /* height ની જગ્યાએ min-height જેથી નાની સ્ક્રીનમાં કન્ટેન્ટ કપાય નહીં */
+            min-height: 100vh;
             text-align: center;
             padding: 20px;
         }
@@ -46,7 +45,7 @@
         .error-title {
             font-size: 30px;
             font-weight: 700;
-            color: #FFB347; /* Tamaro Amber Color */
+            color: #FFB347;
             margin: 10px 0 20px 0;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -80,37 +79,36 @@
             box-shadow: 0 8px 20px rgba(255, 179, 71, 0.4);
         }
 
-        /* -------------------------------------
-           Responsive Design (Media Queries)
-        ---------------------------------------- */
-
-        /* Tablet View (iPad વગેરે માટે) */
         @media (max-width: 768px) {
             .error-code {
                 font-size: 110px;
             }
+
             .error-title {
                 font-size: 24px;
             }
+
             .error-desc {
                 font-size: 15px;
-                padding: 0 15px; /* સાઈડમાંથી જગ્યા રાખવા */
+                padding: 0 15px;
             }
         }
 
-        /* Mobile View (ફોન માટે) */
         @media (max-width: 480px) {
             .error-code {
-                font-size: 80px; /* મોબાઇલમાં 404 નાનું દેખાશે જેથી સ્ક્રીન બહાર ન જાય */
+                font-size: 80px;
             }
+
             .error-title {
                 font-size: 20px;
                 letter-spacing: 1px;
             }
+
             .error-desc {
                 font-size: 14px;
                 margin-bottom: 25px;
             }
+
             .back-home-btn {
                 padding: 12px 30px;
                 font-size: 14px;
@@ -121,7 +119,6 @@
 
 <body>
 
-    <!-- 404 Error Content -->
     <div class="error-page-wrapper">
         <h1 class="error-code">404</h1>
         <h2 class="error-title">This Page Does Not Exist</h2>
